@@ -1,0 +1,3 @@
+# testidlegame
+Test Idle Game
+:)
