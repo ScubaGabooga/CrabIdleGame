@@ -1,3 +1,3 @@
-# testidlegame
+# CrabIdleGame
 Craaaaab Idle Game
 :)
