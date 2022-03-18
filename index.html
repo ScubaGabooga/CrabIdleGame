@@ -1,37 +1,117 @@
-<html>
+<html lang="en">
 <head>
 	<title>Craaaaab Idle Game</title>
-	<link rel="stylesheet" href="styles.css">
+	<link href="styles.css" rel="stylesheet" type="text/css" title="default">
 	<script type="text/javascript" src="base.js"></script>
 	<meta charset=utf-8>
 </head>
 <body onload="updateAllUI()">
-	<h1>Craaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab Idle Game</h1>
-	
-	
-	<h2>
-	Crabs: <span id="crabs">0</span> ----- <span id="crabsPerSec">0</span>/sec
-	<br>
-	Crab Legs: <span id="crabLegs">0</span> ----- <span id="crabLegsPerSec">0</span>/sec
-	</br>
-	Cash: <span id="cash">0</span> ----- <span id="cashPerSec">0</span>/sec
-
-	</h2>
-	<br>
-	
-	
-	
-	<button onclick="pickUpCrab(handCount)">Pick Up Crab</button>
-	<button onclick="harvestCrab(1)">Harvest Crab</button>
-	<button onclick="sellCrabLeg(1)">Sell Crab Leg</button>
-	<br>
-	<button onclick="buyHand(1)">Buy Hand Lvl.<span id="handCount">0</span> | $<span id="handCost">0</span></button>
-	<br>
-	<button onclick="buyCrabCatcher(1)">Buy Crab Catcher Lvl.<span id="crabCatcherCount">0</span> | $<span id="crabCatcherCost">0</span></button>
-	<button onclick="buyCrabHarvester(1)">Buy Crab Harvester Lvl.<span id="crabHarvesterCount">0</span> | $<span id="crabHarvesterCost">0</span></button>
-	<button onclick="buyCrabSeller(1)">Buy Crab Seller Lvl.<span id="crabSellerCount">0</span> | $<span id="crabSellerCost">0</span></button>
-	<br>
-	<img src="crab.png">
-	
+    <div id="topBar">
+        <h1>Craaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab Idle Game</h1>
+        <h2>v 0.1.2 | CSS Update Again</h2>
+        <div id="titleBlock">
+			<div id="leftMenu">
+				<ul>
+					<li><button>Credits</button></li>
+					<li><button>Wiki</button></li>
+				</ul>
+			</div>
+			<div id="rightMenu">
+				<ul>
+					<li><button>Save</button></li>
+					<li><button>Options</button></li>
+					<li><button>ChangeLog</button></li>
+				</ul>
+			</div>
+        </div>
+    </div>
+	<div id="leftContainer">
+		<h1>Resources</h1>
+			<table id="resourceTable">
+				<tbody>
+					<tr>
+						<th>Crabs</th>
+						<td id="crabs">0</td>
+						<td>/0</td>
+						<td id="crabsPerSec">0</td>
+					</tr>
+					<tr>
+						<th>Crab Legs</th>
+						<td><span id="crabLegs">0</span></td>
+						<td>/0</td>
+						<td><span id="crabLegsPerSec">0</span></td>
+					</tr>
+					<tr>
+						<th>Cash</th>
+						<td><span id="cash">0</span></td>
+						<td>/0</td>
+						<td><span id="cashPerSec">0</span></td>
+					</tr>		
+				</tbody>
+			</table>
+		<img src="crab.png">
+		<div id="notifications">
+			<h1>Notifications</h1>
+			<ul>
+				<li>Autosaved.</li>
+				<li>Saved game.</li>
+			</ul>
+		</div>
+		<h1>Temporary Changelog</h1>
+		<p>
+			<b>0.1.2 [03-17-2022] - Changes to CSS Once Again</b><br>
+			- Got everything to work properly this time... I think.<br>
+			Should be the last time I change css in a while.<br>
+			- Added notifications.<br>
+			- Added navigation bar at the top.
+			<hr>
+			<b>0.1.1 [03-16-2022] - Changes to CSS TWICE</b><br>
+			- Added cool changelog thing.<br>
+			- Moved resources to left of screen.<br>
+			<hr>
+			<b>0.1 [03-15-2022] - Yay Crab Idle Game!</b><br>
+			- Added 3 resources; crab, crab legs, cash.<br>
+			- Added 1 upgrade; hand: pick up more crabs per click.<br>
+			- Added 3 automaters; crab picker, crab harvester, crab seller.<br>
+			- JS is currently very unoptimized
+		</p>
+    </div>
+	<div id="rightContainer">
+		<div id="titleBlock">
+			<div id="leftMenu">
+				<ul>
+					<li><button>Beach</button></li>
+					<li><button>Ocean</button></li>
+					<li><button>Crab Farm</button></li>
+				</ul>
+			</div>
+			<div id="rightMenu">
+				<ul>
+					<li>Buy: </li>
+					<li><button class="smallButton" disabled="">1</button></li>
+					<li><button class="smallButton">10</button></li>
+					<li><button class="smallButton">100</button></li>
+					<li><button class="smallButton">1/2 Max</button></li>
+					<li><button class="smallButton">Max</button></li>
+				</ul>
+			</div>
+        </div>
+		<div id="border"></div>
+		<div id="buttonContainer">
+			<h1>Tasks</h1>
+				<button onclick="pickUpCrab(handCount)">Pick Up Crab</button>
+				<button onclick="harvestCrab(1)">Harvest Crab</button>
+				<button onclick="sellCrabLeg(1)">Sell Crab Leg</button>
+		
+				<button onclick="sellCrabLeg(1)" class="new">New</button>
+			<h1>Upgrades</h1>
+				<button onclick="buyHand(1)">Buy Hand <br>Lvl.<span id="handCount">0</span> | $<span id="handCost">0</span></button>
+			<h1>Automaters</h1>
+				<button onclick="buyCrabCatcher(1)">Buy Crab Catcher <br>Lvl.<span id="crabCatcherCount">0</span> | $<span id="crabCatcherCost">0</span></button>
+				<button onclick="buyCrabHarvester(1)">Buy Crab Harvester <br>Lvl.<span id="crabHarvesterCount">0</span> | $<span id="crabHarvesterCost">0</span></button>
+				<button onclick="buyCrabSeller(1)">Buy Crab Seller <br>Lvl.<span id="crabSellerCount">0</span> | $<span id="crabSellerCost">0</span></button>
+		</div>
+	</div>
+    <div id="copyright">The World's Best Idle Game Made by Scuba Gabooga</div>
 </body>
 </html>
