@@ -1,29 +1,198 @@
+/* 
+#f64311 orange
+#4211f5 purple
+#020007 purple darker
+#000000 black
+#ffffff white
+#101010 gray darker
+#333333 gray
+#777777 gray lighter
+
+*/
+html {
+	min-height: 100%;
+}
 body {
-	background-color: #050505;
-	color: white;
-	
+	color: #ffffff;
+	background-color: #020007;
 	font-family: "Trebuchet MS", sans-serif;
+	margin: 10px;	/* border around the whole thing */
+	padding: 0;
+	overflow-y: scroll;
+	text-align: center;
 }
-
-button {
-	background-color: #006054;
-	padding: 8px 32px;
-	transition-duration: 0.4s;
+h1 {
+	letter-spacing: 1px;
+	font-size: 1.5em;
 }
-
 button {
-	font-size: 16px;
-	font-weight: bold;
+	background-color: #333333;
 	color: white;
-	border: 2px;
 	border-radius: 2px;
-	margin: 8px 2px;
+	border: 2px solid #777777;
+	padding: 4px;
+	cursor: pointer;
+	min-width: 6vw;
+	vertical-align: middle;
+
+}
+button.smallButton {
+	min-width: 3.5vw;
+	width: auto;
+}
+button:hover {
+	box-shadow: 0px 0px 2px 2px #f64311;
+	font-weight: bold;
+}
+button:active {
+	background-color: #020007;
+	color: #777777;
+	box-shadow: 0px 0px 15px 5px #4211f5 inset;
+}
+button:disabled {
+	background-color: #020007;
+	color: #777777;
+	cursor: default;
+	border-color: #4211f5;
+	box-shadow: 0px 0px 2px 2px #101010 inset;
+}
+button:disabled:hover {
+	box-shadow: 0px 0px 2px 2px #101010 inset;
+	font-weight: normal;
+}
+button.new {
+	background-color: #f64311;
+}
+button.new:hover {
+	box-shadow: 0px 0px 2px 2px #4211f5;
+}
+button.new:active {
+	background-color: #101010;
+	color: #777777;
+	box-shadow: 0px 0px 15px 5px #f64311 inset;
+}
+#topBar {
+	background: #020007;
+}
+#topBar h1 {
+	margin: auto;
+	text-shadow: 2px 2px 5px #f64311;
+	font-size: 2.5em;
+}
+#topBar h2 {
+	color: white;
+	text-shadow: 2px 2px 5px #4211f5;
+	margin: auto;
+}
+#titleBlock {
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#titleBlock li {
+	margin: 0px;
+	list-style-type: none;
+	display: inline;
+	cursor: pointer;
+}
+#leftMenu {
+	margin-left: 5px;
+	float: left;
+}
+#rightMenu {
+	float: right;
+	margin-right: 5px;
+}
+#titleBlock ul {
+	padding: 0;
+	margin: 0;
+}
+#titleBlock button {
+	display: inline;
+	margin: 10px 0;				/* Scuffed */
 }
 
-button:hover { 
-	background-color: #144c46; 
+#leftContainer {
+	float: left;
+	width: 25%;
+	background-color: #101010;
+	display: block; 
+	padding: 10px;
+}
+#leftContainer h1, #buttonContainer h1 {
+	margin: 5px;
+	color: #f64311;
+	text-shadow: 2px 2px 5px #000000;
+}
+#leftContainer table {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #333333;
+	border: 2px solid #4211f5;
+	padding: 0.5em;
+}
+#leftContainer th {
+	padding: 0 10px 0 0;
+	text-align: left;
+}
+#leftContainer td {
+	padding: 0 0 0 30px;
+	text-align: right;
+}
+#leftContainer td, #leftContainer th {
+	word-break: break-all;
+	word-wrap: break-word;
+}
+#leftContainer img {
+	height: auto;
+	max-width: 100%;
+}
+#leftContainer ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+#notifications {
+	padding: 5px;
+	margin: 5px;
+}
+#notifications li{
+	text-align: left;
+	padding: 5px;
+}
+#rightContainer {
+	background-color: #101010; 							/* Change */
+	margin: 0;
+	padding: 0 10px;
+}
+#border {
+	border-bottom: 3px solid #4211f5;
+}
+#buttonContainer {
+	margin: 10px;
+	margin-bottom: 50px;
+	padding: 0;
+}
+#buttonContainer button {
+	margin: 0.5vw;
+	min-width: 150px;
+	min-height: 50px;		/* Change */
+}
+#copyright {
+	padding: 5px;
+	font-size: 75%;
+}
+#topBar, #leftContainer, #rightContainer, #resourceTable {
+	border-radius: 0px;
+	overflow: hidden;
+	/*
+	-webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(#00abeb), to(#fff), color-stop(0.5, #fff), color-stop(0.5, #66cc00)) 21 30 30 21 repeat repeat;
+	*/
 }
 
-button:focus { 
-	background-color: #008a79; 
+@media only screen and (max-width: 850px) {
+	#leftContainer {
+		float: none;
+		width: auto;
+	}
 }
