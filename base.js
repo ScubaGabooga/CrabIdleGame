@@ -30,9 +30,9 @@ function updateAllUI(){
 	document.getElementById("crabSellerCount").innerHTML = crabSellerCount;
 	document.getElementById("crabSellerCost").innerHTML = crabSellerCost;
 
-	document.getElementById("crabsPerSec").innerHTML = crabsPerSec;
-	document.getElementById("crabLegsPerSec").innerHTML = crabLegsPerSec;
-	document.getElementById("cashPerSec").innerHTML = cashPerSec;
+	document.getElementById("crabsPerSec").innerHTML = crabsPerSec + "/s";
+	document.getElementById("crabLegsPerSec").innerHTML = crabLegsPerSec  + "/s";
+	document.getElementById("cashPerSec").innerHTML = cashPerSec  + "/s";
 
 }
 
