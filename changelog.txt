@@ -1,0 +1,27 @@
+v0.1 
+2022-03-15 - Yay Crab Idle Game!
+    Added 3 resources; crab, crab legs, cash.
+    Added 1 upgrade; hand: pick up more crabs per click.
+    Added 3 automaters; crab picker, crab harvester, crab seller.
+    JS is currently very unoptimized
+
+v0.1.1, v0.1.1(2) 
+2022-03-16 - Changes to CSS TWICE
+    Added cool changelog thing.
+    Moved resources to left of screen.
+
+v0.1.2 
+2022-03-17 - Changes to CSS Once Again
+    Got everything to work properly this time... I think.
+        Should be the last time I change css in a while.
+    Added notifications.
+    Added navigation bar at the top.
+
+
+
+
+
+
+Things to Add:
+
+
